@@ -1,10 +1,32 @@
-import Layout1 from './Layout1/index'
-function App() {
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Root from "./Components/Root";
+import Dashboard from "./Components/Dashboard";
+import Leads from "./Components/Leads";
+import Settings from "./Components/Settings";
 
+const App = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Root/>,
+      children: [
+        {
+          path: "dashboard",
+          element: <Dashboard/>,
+        },
+        {
+          path: "leads",
+          element: <Leads/>,
+        },
+        {
+          path: "settings",
+          element: <Settings/>,
+        },
+      ],
+    },
+  ]);
 
-  return (
-    <Layout1/>
-  );
-}
+  return <RouterProvider router={router} />;
+};
 
 export default App;
