@@ -3,12 +3,16 @@ import Root from "./Components/Root";
 import Dashboard from "./Components/Dashboard";
 import Leads from "./Components/Leads";
 import Settings from "./Components/Settings";
+import Reports from "./Components/Reports";
+import CurrentStocks from "./Components/CurrentStocks";
+import Error from "./Components/Error";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root/>,
+      errorElement:<Error/>,
       children: [
         {
           path: "dashboard",
@@ -17,6 +21,14 @@ const App = () => {
         {
           path: "leads",
           element: <Leads/>,
+        },
+        {
+          path: "reports",
+          element: <Reports/>,
+        },
+        {
+          path: "currentstocks",
+          element: <CurrentStocks/>,
         },
         {
           path: "settings",

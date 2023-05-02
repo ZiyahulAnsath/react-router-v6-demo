@@ -2,7 +2,7 @@ import React from 'react'
 
 const CurrentStocks = () => {
   return (
-    <div>CurrentStocks</div>
+    <div>Current Stocks</div>
   )
 }
 

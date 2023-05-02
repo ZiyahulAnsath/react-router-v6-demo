@@ -1,0 +1,14 @@
+.sideMenu{
+    background-color: rgb(219, 235, 249);
+    text-align: center;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.sideMenu:hover{
+    cursor: pointer;
+}
+.listItem:hover{
+    background-color: white;
+    border-radius: 50px;
+}
